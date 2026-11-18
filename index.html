@@ -1,633 +1,281 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#f6f5ef">
-
-  <title>Achint Awasthi | Developer Portfolio</title>
-
-  <meta name="description" content="Achint Awasthi — B.Tech CSE (AI) student exploring software development, AI and cloud technologies.">
-
+  <meta name="description" content="Achint Awasthi — B.Tech CSE (AI) student at PSIT Kanpur, exploring software development, AI and cloud technologies.">
+  <title>Achint Awasthi — Developer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="style.css">
 </head>
+<body class="is-intro">
 
-<body>
+  <!-- ============ LAPTOP OPENING INTRO ============ -->
+  <div class="intro" id="intro" aria-label="Loading portfolio">
+    <div class="intro-glow"></div>
+    <div class="intro-stage" id="introStage">
+      <div class="laptop-wrap" id="laptopWrap">
+        <div class="laptop" id="laptop">
 
-  <!-- LOADER -->
-  <div class="loader" id="loader">
-    <div class="loader-mark">A<span>.</span></div>
-    <div class="loader-line"><i></i></div>
-    <p>Curiosity in progress</p>
-  </div>
-
-  <!-- NAVBAR -->
-  <nav class="nav">
-    <a class="wordmark" href="#home">achint<span>.</span></a>
-
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#journey">Journey</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <a class="nav-cta" href="mailto:achintawasthi28@gmail.com">
-      Let's talk ↗
-    </a>
-
-    <button class="menu-toggle" id="menuToggle">☰</button>
-  </nav>
-
-  <main>
-
-    <!-- HERO -->
-    <header class="hero section-shell" id="home">
-
-      <div class="hero-copy">
-
-        <div class="eyebrow">
-          <span class="live-dot"></span>
-          B.Tech CSE (AI) · PSIT Kanpur
-        </div>
-
-        <p class="hero-kicker">HELLO, WORLD. I'M ACHINT.</p>
-
-        <h1 id="pressureTitle">
-          Building ideas into
-          <em>practical</em> digital experiences.
-        </h1>
-
-        <p class="hero-intro">
-          I'm a student exploring software development,
-          artificial intelligence and cloud technologies.
-          I learn by building, experimenting and collaborating.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button button-dark" href="#work">
-            Explore my work ↘
-          </a>
-
-          <a class="text-link" href="mailto:achintawasthi28@gmail.com">
-            Get in touch ↗
-          </a>
-        </div>
-
-        <div class="hero-meta">
-          <span>BASED IN INDIA</span>
-          <span>OPEN TO LEARNING & COLLABORATIONS</span>
-        </div>
-
-      </div>
-
-      <!-- LANYARD -->
-      <div class="hero-visual">
-
-        <div class="hero-orbit orbit-one"></div>
-        <div class="hero-orbit orbit-two"></div>
-
-        <div class="lanyard-wrap" id="lanyard">
-
-          <div class="lanyard-rope">
-            <span></span>
+          <!-- keyboard deck (lies flat) -->
+          <div class="deck" id="deck">
+            <div class="deck-top">
+              <div class="deck-speaker l"></div><div class="deck-speaker r"></div>
+              <div class="keys" id="keys"></div>
+              <div class="trackpad"></div>
+              <div class="deck-notch"></div>
+            </div>
+            <div class="deck-light" id="deckLight"></div>
           </div>
 
-          <article class="id-card" id="idCard">
+          <!-- lid (rotates open) -->
+          <div class="lid" id="lid">
+            <div class="lid-back"><div class="lid-logo">A<span>.</span></div><div class="lid-sheen"></div></div>
+            <div class="lid-front">
+              <div class="bezel"><i class="cam"></i>
+                <div class="screen" id="screen">
 
-            <div class="id-card-top">
-              <span>CREATIVE DEVELOPER</span>
-              <span>2026</span>
+                  <!-- boot -->
+                  <div class="boot" id="boot">
+                    <div class="boot-mark">A<span>.</span></div>
+                    <div class="boot-bar"><i id="bootFill"></i></div>
+                    <div class="boot-meta"><span id="bootText">STARTING UP</span><span id="bootPct">0%</span></div>
+                  </div>
+
+                  <!-- desktop (appears after boot) -->
+                  <div class="desk" id="desk">
+                    <div class="desk-bar">
+                      <b>A.</b><span>achint.os</span><span class="dim">About</span><span class="dim">Work</span><span class="dim">Journey</span>
+                      <em id="deskClock">--:--</em>
+                    </div>
+                    <div class="desk-win" id="deskWin">
+                      <div class="desk-dots"><i></i><i></i><i></i></div>
+                      <p class="desk-k">WELCOME</p>
+                      <h3>Hello, I'm <em>Achint.</em></h3>
+                      <p class="desk-s">B.Tech CSE (AI) · PSIT Kanpur</p>
+                    </div>
+                    <div class="desk-dock"><i></i><i></i><i></i><i></i><i></i></div>
+                  </div>
+
+                  <div class="screen-glare"></div>
+                </div>
+              </div>
             </div>
-
-            <div class="id-photo">
-              <img src="achint.jpg" alt="Achint Awasthi">
-            </div>
-
-            <div class="id-name">Achint Awasthi</div>
-
-            <div class="id-role">
-              CSE (AI) STUDENT · BUILDER
-            </div>
-
-            <div class="id-bottom">
-              <span>PSIT KANPUR</span>
-              <span class="id-stamp">A.</span>
-            </div>
-
-          </article>
-
-          <div class="lanyard-hint">DRAG THE CARD ↗</div>
+          </div>
 
         </div>
-
-        <div class="floating-note note-top">
-          always learning ✳
-        </div>
-
-        <div class="floating-note note-bottom">
-          made with curiosity
-        </div>
-
-      </div>
-
-      <div class="hero-index">01 — INTRODUCTION</div>
-
-    </header>
-
-
-    <!-- TEXT LOOP -->
-    <div class="text-loop">
-      <div class="loop-track">
-        <span>BUILDING</span><b>✳</b>
-        <span>LEARNING</span><b>✳</b>
-        <span>EXPERIMENTING</span><b>✳</b>
-        <span>SHIPPING</span><b>✳</b>
-        <span>BUILDING</span><b>✳</b>
-        <span>LEARNING</span><b>✳</b>
-        <span>EXPERIMENTING</span><b>✳</b>
-        <span>SHIPPING</span><b>✳</b>
+        <div class="laptop-shadow" id="laptopShadow"></div>
       </div>
     </div>
+    <div class="intro-veil" id="introVeil"></div>
+    <button class="intro-skip" id="introSkip" type="button">Skip intro <span>↦</span></button>
+    <noscript><style>.intro{display:none!important}body.is-intro{overflow:auto!important}.reveal,.rv{opacity:1!important;transform:none!important;filter:none!important}</style></noscript>
+  </div>
 
+  <!-- ============ OS INTERFACE ============ -->
+  <div class="wallpaper" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><div class="wp-grid"></div></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div>
+
+  <header class="menubar" id="menubar">
+    <a class="mb-logo" href="#home" aria-label="Home">A<span>.</span></a>
+    <span class="mb-app">achint.os</span>
+    <nav class="mb-links" id="mbLinks">
+      <a href="#about">About</a><a href="#approach">Approach</a><a href="#work">Work</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="mb-right">
+      <span class="mb-icon" title="Wi-Fi"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10.5 10.5 0 0 1 14 0M8.5 16a5.5 5.5 0 0 1 7 0"/><circle cx="12" cy="19.4" r="1" fill="currentColor"/></svg></span>
+      <span class="mb-icon" title="Battery"><svg viewBox="0 0 28 14" width="25" height="13" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="22" height="12" rx="3.5"/><rect x="3.5" y="3.5" width="14" height="7" rx="1.6" fill="currentColor" stroke="none" class="batt"/><path d="M25 5v4" stroke-linecap="round"/></svg></span>
+      <span class="mb-clock" id="mbClock">--</span>
+      <a class="mb-cta" href="mailto:achintawasthi28@gmail.com">Let's talk <span>↗</span></a>
+      <button class="mb-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow-pill rv"><span class="live-dot"></span> B.Tech CSE (AI) · PSIT Kanpur</div>
+        <p class="hero-kicker rv">HELLO, WORLD. I'M ACHINT.</p>
+        <h1 id="heroTitle" aria-label="Building ideas into practical digital experiences.">Building ideas into <em>practical</em> digital experiences.</h1>
+        <p class="hero-intro rv">I'm a student exploring software development, artificial intelligence and cloud technologies. I learn by building, experimenting and collaborating.</p>
+        <div class="hero-actions rv">
+          <a class="button button-dark magnetic" href="#work">Explore my work <span>↘</span></a>
+          <a class="text-link" href="mailto:achintawasthi28@gmail.com">Get in touch <span>↗</span></a>
+        </div>
+        <div class="hero-meta rv"><span>BASED IN KANPUR, INDIA</span><span>OPEN TO LEARNING & COLLABORATIONS</span></div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-orbit orbit-one" data-depth="18"></div><div class="hero-orbit orbit-two" data-depth="-14"></div>
+        <div class="lanyard" id="lanyard">
+          <div class="anchor"></div>
+          <div class="swing" id="swing">
+            <div class="strap"><span>ACHINT ✳ PSIT ✳ ACHINT ✳ PSIT ✳ ACHINT ✳ PSIT ✳ ACHINT ✳ PSIT ✳</span></div>
+            <div class="clip"></div>
+            <article class="id-card" id="idCard">
+              <div class="id-card-top"><span>CREATIVE DEVELOPER</span><span>2026 / 01</span></div>
+              <div class="id-photo"><img src="achint.jpg" alt="Portrait of Achint Awasthi" draggable="false"><i class="id-shine"></i></div>
+              <div class="id-name">Achint Awasthi</div>
+              <div class="id-role">CSE (AI) STUDENT · BUILDER</div>
+              <div class="id-bottom"><span>PSIT KANPUR</span><span class="id-stamp">A.</span></div>
+            </article>
+          </div>
+          <div class="lanyard-hint">DRAG &amp; SWING THE CARD ↗</div>
+        </div>
+        <div class="floating-note note-top rv">always learning <span>✳</span></div>
+        <div class="floating-note note-bottom rv">made with curiosity</div>
+      </div>
+      <div class="hero-index rv">01 <span>—</span> INTRODUCTION</div>
+      <div class="scroll-cue rv"><i></i></div>
+    </section>
+
+    <div class="text-loop" aria-label="Building learning experimenting shipping">
+      <div class="loop-track" id="loopTrack"><div class="loop-set"><span>BUILDING</span><b>✳</b><span>LEARNING</span><b>✳</b><span>EXPERIMENTING</span><b>✳</b><span>SHIPPING</span><b>✳</b></div><div class="loop-set" aria-hidden="true"><span>BUILDING</span><b>✳</b><span>LEARNING</span><b>✳</b><span>EXPERIMENTING</span><b>✳</b><span>SHIPPING</span><b>✳</b></div><div class="loop-set" aria-hidden="true"><span>BUILDING</span><b>✳</b><span>LEARNING</span><b>✳</b><span>EXPERIMENTING</span><b>✳</b><span>SHIPPING</span><b>✳</b></div></div>
+    </div>
 
     <!-- ABOUT -->
     <section class="section section-shell" id="about">
-
-      <div class="section-heading reveal">
-        <p class="eyebrow">01 / A LITTLE ABOUT ME</p>
-
-        <h2>
-          Curious by nature.<br>
-          <em>Builder by practice.</em>
-        </h2>
-      </div>
-
-      <div class="about-grid">
-
-        <div class="about-copy reveal">
-
-          <p class="large-copy">
-            I'm Achint, pursuing B.Tech in Computer Science
-            & Engineering (AI) at Pranveer Singh Institute
-            of Technology, Kanpur.
-          </p>
-
-          <p>
-            I enjoy turning ideas into working software and
-            exploring how technology can solve practical problems.
-            My current interests include frontend development,
-            Python, AI and cloud computing.
-          </p>
-
-          <p>
-            Beyond code, I work with the Energy Club at PSIT
-            as Editing Head, contributing to video and content work.
-          </p>
-
-          <div class="skill-cloud">
-            <span>Python</span>
-            <span>C / C++</span>
-            <span>Java</span>
-            <span>JavaScript</span>
-            <span>HTML & CSS</span>
-            <span>React</span>
-            <span>AWS & Cloud</span>
-            <span>Git / GitHub</span>
-            <span>Video Editing</span>
+      <div class="win reveal">
+        <div class="win-bar"><div class="win-dots"><i></i><i></i><i></i></div><span class="win-title">about.md — achint.os</span><span class="win-tag">01</span></div>
+        <div class="win-body">
+          <div class="section-heading"><p class="eyebrow">01 / A LITTLE ABOUT ME</p><h2 class="split">Curious by nature.<br><em>Builder by practice.</em></h2></div>
+          <div class="about-grid">
+            <div class="about-copy">
+              <p class="large-copy rv">I’m Achint, pursuing B.Tech in Computer Science & Engineering (AI) at Pranveer Singh Institute of Technology, Kanpur.</p>
+              <p class="rv">I enjoy turning ideas into working software and exploring how technology can solve practical problems. My current interests include frontend development, Python, AI and cloud computing.</p>
+              <p class="rv">Beyond code, I work with the Energy Club at PSIT as Editing Head, contributing to video and content work. I enjoy collaborating with people, shaping ideas and telling stories through visuals.</p>
+              <div class="skill-cloud"><span class="rv">Python</span><span class="rv">C / C++</span><span class="rv">Java</span><span class="rv">JavaScript</span><span class="rv">HTML & CSS</span><span class="rv">React</span><span class="rv">AWS & Cloud</span><span class="rv">Git / GitHub</span><span class="rv">Video Editing</span></div>
+            </div>
+            <aside class="profile-card rv" id="profileCard">
+              <div class="profile-card-glow"></div>
+              <div class="profile-top"><span>PERSONAL PROFILE</span><span>✳ 2026</span></div>
+              <div class="profile-avatar"><img src="achint.jpg" alt="Achint Awasthi" draggable="false"></div>
+              <h3>Achint Awasthi</h3><p class="profile-sub">Student · Developer in progress</p>
+              <p class="profile-bio">Exploring the intersection of code, creativity and useful technology.</p>
+              <div class="profile-stats"><div><b>AI</b><small>FIELD OF STUDY</small></div><div><b>PSIT</b><small>INSTITUTE</small></div><div><b data-count="2029" data-from="2025">2029</b><small>GRADUATION</small></div></div>
+              <div class="profile-social"><a href="https://github.com/achintawasthi01-sys" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/achint-awasthi-32b168424" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+            </aside>
           </div>
-
         </div>
-
-
-        <!-- PROFILE CARD -->
-        <aside class="profile-card reveal" id="profileCard">
-
-          <div class="profile-card-glow"></div>
-
-          <div class="profile-top">
-            <span>PERSONAL PROFILE</span>
-            <span>✳ 2026</span>
-          </div>
-
-          <div class="profile-avatar">
-            <img src="achint.jpg" alt="Achint Awasthi">
-          </div>
-
-          <h3>Achint Awasthi</h3>
-
-          <p class="profile-sub">
-            Student · Developer in progress
-          </p>
-
-          <p class="profile-bio">
-            Exploring the intersection of code,
-            creativity and useful technology.
-          </p>
-
-          <div class="profile-stats">
-            <div><b>AI</b><small>FIELD</small></div>
-            <div><b>PSIT</b><small>INSTITUTE</small></div>
-            <div><b>2029</b><small>GRADUATION</small></div>
-          </div>
-
-          <div class="profile-social">
-            <a href="https://github.com/achintawasthi01-sys" target="_blank">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/achint-awasthi-32b168424" target="_blank">LinkedIn ↗</a>
-          </div>
-
-        </aside>
-
       </div>
-
     </section>
 
-
-    <!-- PIPELINE -->
-    <section class="process-section">
-
+    <!-- APPROACH -->
+    <section class="process-section" id="approach">
       <div class="section-shell">
-
-        <div class="section-heading reveal">
-          <p class="eyebrow">02 / MY APPROACH</p>
-
-          <h2>
-            From a rough idea<br>
-            to <em>something real.</em>
-          </h2>
-        </div>
-
-        <div class="pipeline reveal">
-
-          <div class="pipeline-line"><i></i></div>
-
-          <div class="pipeline-step">
-            <span class="step-no">01</span>
-            <div class="step-icon">⌕</div>
-            <h3>Explore</h3>
-            <p>Understand the problem and ask better questions.</p>
-          </div>
-
-          <div class="pipeline-step">
-            <span class="step-no">02</span>
-            <div class="step-icon">✳</div>
-            <h3>Plan</h3>
-            <p>Break the idea into small, achievable steps.</p>
-          </div>
-
-          <div class="pipeline-step">
-            <span class="step-no">03</span>
-            <div class="step-icon">⌘</div>
-            <h3>Build</h3>
-            <p>Turn concepts into working interfaces and code.</p>
-          </div>
-
-          <div class="pipeline-step">
-            <span class="step-no">04</span>
-            <div class="step-icon">↗</div>
-            <h3>Improve</h3>
-            <p>Test, learn from feedback and keep iterating.</p>
-          </div>
-
+        <div class="section-heading"><p class="eyebrow rv">02 / MY APPROACH</p><h2 class="split">From a rough idea<br>to <em>something real.</em></h2></div>
+        <div class="pipeline" id="pipeline">
+          <div class="pipeline-line"><i id="pipeLine"></i></div>
+          <div class="pipeline-step"><span class="step-no">01</span><div class="step-icon">⌕</div><h3>Explore</h3><p>Understand the problem and ask better questions.</p></div>
+          <div class="pipeline-step"><span class="step-no">02</span><div class="step-icon">✳</div><h3>Plan</h3><p>Break the idea into small, achievable steps.</p></div>
+          <div class="pipeline-step"><span class="step-no">03</span><div class="step-icon">⌘</div><h3>Build</h3><p>Turn concepts into working interfaces and code.</p></div>
+          <div class="pipeline-step"><span class="step-no">04</span><div class="step-icon">↗</div><h3>Improve</h3><p>Test, learn from feedback and keep iterating.</p></div>
         </div>
       </div>
     </section>
 
-
-    <!-- PROJECTS -->
+    <!-- WORK -->
     <section class="section work-section" id="work">
-
       <div class="section-shell">
-
-        <div class="work-heading reveal">
-
-          <div>
-            <p class="eyebrow">03 / SELECTED WORK</p>
-
-            <h2>
-              Things I've been<br>
-              <em>working on.</em>
-            </h2>
+        <div class="work-heading"><div><p class="eyebrow rv">03 / SELECTED WORK</p><h2 class="split">Things I've been<br><em>working on.</em></h2></div><p class="work-note rv">A few experiments, academic projects and ideas brought to life. Drag to explore <span>→</span></p></div>
+        <div class="win win-flat reveal">
+          <div class="win-bar"><div class="win-dots"><i></i><i></i><i></i></div><span class="win-title">Projects — Finder</span><span class="win-tag" id="carouselCount">01 / 04</span></div>
+          <div class="win-body win-body-tight">
+            <div class="carousel-shell">
+              <button class="carousel-arrow prev" id="prevProject" aria-label="Previous projects">←</button>
+              <div class="project-carousel" id="projectCarousel" tabindex="0" aria-label="Project carousel">
+                <article class="project-card" data-holo>
+                  <div class="project-art art-nabz"><div class="art-orbit"></div><div class="pulse-ring"></div><span class="art-label">HEALTH / SIGNAL</span><strong>NABZ<br><em>AI</em></strong><small>HEALTH SIGNAL RADAR</small></div>
+                  <div class="project-info"><div class="project-number">01 <span>· HEALTH TECHNOLOGY</span></div><h3>NABZ AI — Health Signal Radar</h3><p>A health signal detection platform built with a team and deployed live on the web.</p><div class="project-tags"><span>AI</span><span>Healthcare</span><span>Web App</span></div><div class="project-links"><a href="https://nabz-ai-alpha.vercel.app" target="_blank" rel="noopener">Live website ↗</a><a href="https://github.com/achintawasthi01-sys" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+                </article>
+                <article class="project-card" data-holo>
+                  <div class="project-art art-flood"><div class="flood-grid"></div><div class="flood-wave wave-a"></div><div class="flood-wave wave-b"></div><span class="art-label">DISASTER RESPONSE / SIH 2026</span><strong>FLOOD<br><em>OPS</em></strong><small>INUNDATION PROJECTION</small></div>
+                  <div class="project-info"><div class="project-number">02 <span>· DISASTER MANAGEMENT</span></div><h3>FloodOps AI</h3><p>A Smart India Hackathon 2026 software project focused on projecting inundation extent from flood forecasts, built with Team Unthinkable Coder.</p><div class="project-tags"><span>SIH 2026</span><span>Flood Forecasts</span><span>Mapping</span></div><div class="project-links"><a href="https://github.com/achintawasthi01-sys" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+                </article>
+                <article class="project-card" data-holo>
+                  <div class="project-art art-ddr"><div class="medical-cross">+</div><span class="art-label">ACADEMIC PROJECT / MACHINE LEARNING</span><strong>DOCTOR<br><em>DISEASE</em></strong><small>SYMPTOM-BASED PREDICTION</small></div>
+                  <div class="project-info"><div class="project-number">03 <span>· HEALTHCARE / ML</span></div><h3>DDR — Doctor Disease</h3><p>A CSE (AI) mini project exploring disease prediction from symptoms, developed under faculty guidance.</p><div class="project-tags"><span>Python</span><span>Machine Learning</span><span>Healthcare</span></div><div class="project-links"><a href="https://github.com/achintawasthi01-sys" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+                </article>
+                <article class="project-card" data-holo>
+                  <div class="project-art art-portfolio"><div class="portfolio-shapes"><i></i><i></i><i></i></div><span class="art-label">PERSONAL / WEB DEVELOPMENT</span><strong>MY<br><em>SPACE.</em></strong><small>PERSONAL PORTFOLIO</small></div>
+                  <div class="project-info"><div class="project-number">04 <span>· WEB DEVELOPMENT</span></div><h3>Personal Portfolio</h3><p>A responsive personal website showcasing my learning journey, projects and interests, with interactive details and motion.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://github.com/achintawasthi01-sys" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+                </article>
+              </div>
+              <button class="carousel-arrow next" id="nextProject" aria-label="Next projects">→</button>
+            </div>
+            <div class="carousel-footer"><span>DRAG OR SCROLL TO EXPLORE</span><div class="carousel-progress"><i id="carouselProgress"></i></div></div>
           </div>
-
-          <p class="work-note">
-            A few experiments, academic projects and ideas
-            brought to life. Scroll to explore →
-          </p>
-
         </div>
-
-
-        <div class="carousel-shell reveal">
-
-          <button class="carousel-arrow prev" id="prevProject">←</button>
-
-          <div class="project-carousel" id="projectCarousel">
-
-            <!-- NABZ AI -->
-            <article class="project-card" data-holo>
-
-              <div class="project-art art-nabz">
-                <div class="art-orbit"></div>
-                <div class="pulse-ring"></div>
-
-                <span class="art-label">HEALTH / SIGNAL</span>
-
-                <strong>NABZ<br><em>AI</em></strong>
-
-                <small>HEALTH SIGNAL RADAR</small>
-              </div>
-
-              <div class="project-info">
-
-                <div class="project-number">01 · HEALTH TECHNOLOGY</div>
-
-                <h3>NABZ AI — Health Signal Radar</h3>
-
-                <p>
-                  A health signal detection platform built
-                  with a team and deployed live on the web.
-                </p>
-
-                <div class="project-tags">
-                  <span>AI</span>
-                  <span>Healthcare</span>
-                  <span>Web App</span>
-                </div>
-
-                <div class="project-links">
-                  <a href="https://nabz-ai-alpha.vercel.app" target="_blank">Live website ↗</a>
-                  <a href="https://github.com/achintawasthi01-sys" target="_blank">GitHub ↗</a>
-                </div>
-
-              </div>
-            </article>
-
-
-            <!-- FLOODOPS -->
-            <article class="project-card" data-holo>
-
-              <div class="project-art art-flood">
-
-                <div class="flood-grid"></div>
-
-                <span class="art-label">DISASTER RESPONSE / SIH 2026</span>
-
-                <strong>FLOOD<br><em>OPS</em></strong>
-
-                <small>INUNDATION PROJECTION</small>
-
-              </div>
-
-              <div class="project-info">
-
-                <div class="project-number">02 · DISASTER MANAGEMENT</div>
-
-                <h3>FloodOps AI</h3>
-
-                <p>
-                  A Smart India Hackathon 2026 project focused
-                  on projecting inundation extent from flood forecasts.
-                </p>
-
-                <div class="project-tags">
-                  <span>SIH 2026</span>
-                  <span>Flood Forecasts</span>
-                  <span>Mapping</span>
-                </div>
-
-                <div class="project-links">
-                  <a href="https://github.com/achintawasthi01-sys" target="_blank">GitHub ↗</a>
-                </div>
-
-              </div>
-            </article>
-
-
-            <!-- DDR -->
-            <article class="project-card" data-holo>
-
-              <div class="project-art art-ddr">
-
-                <div class="medical-cross">+</div>
-
-                <span class="art-label">ACADEMIC PROJECT</span>
-
-                <strong>DOCTOR<br><em>DISEASE</em></strong>
-
-                <small>SYMPTOM-BASED PREDICTION</small>
-
-              </div>
-
-              <div class="project-info">
-
-                <div class="project-number">03 · HEALTHCARE / ML</div>
-
-                <h3>DDR — Doctor Disease</h3>
-
-                <p>
-                  A CSE (AI) mini project exploring disease
-                  prediction from symptoms.
-                </p>
-
-                <div class="project-tags">
-                  <span>Python</span>
-                  <span>Machine Learning</span>
-                  <span>Healthcare</span>
-                </div>
-
-                <div class="project-links">
-                  <a href="https://github.com/achintawasthi01-sys" target="_blank">GitHub ↗</a>
-                </div>
-
-              </div>
-            </article>
-
-
-            <!-- PORTFOLIO -->
-            <article class="project-card" data-holo>
-
-              <div class="project-art art-portfolio">
-
-                <div class="portfolio-shapes">
-                  <i></i><i></i><i></i>
-                </div>
-
-                <span class="art-label">PERSONAL / WEB DEVELOPMENT</span>
-
-                <strong>MY<br><em>SPACE.</em></strong>
-
-                <small>PERSONAL PORTFOLIO</small>
-
-              </div>
-
-              <div class="project-info">
-
-                <div class="project-number">04 · WEB DEVELOPMENT</div>
-
-                <h3>Personal Portfolio</h3>
-
-                <p>
-                  A responsive personal website showcasing
-                  my learning journey, projects and interests.
-                </p>
-
-                <div class="project-tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                </div>
-
-                <div class="project-links">
-                  <a href="https://github.com/achintawasthi01-sys" target="_blank">GitHub ↗</a>
-                </div>
-
-              </div>
-            </article>
-
-          </div>
-
-          <button class="carousel-arrow next" id="nextProject">→</button>
-
-        </div>
-
-        <div class="carousel-footer">
-          <span>DRAG OR SCROLL TO EXPLORE</span>
-          <div class="carousel-progress">
-            <i id="carouselProgress"></i>
-          </div>
-          <span id="carouselCount">01 / 04</span>
-        </div>
-
       </div>
     </section>
-
 
     <!-- JOURNEY -->
     <section class="section section-shell" id="journey">
-
-      <div class="section-heading reveal">
-        <p class="eyebrow">04 / THE JOURNEY SO FAR</p>
-
-        <h2>
-          Learning, contributing<br>
-          and <em>growing.</em>
-        </h2>
-      </div>
-
-      <div class="journey-grid">
-
-        <div class="timeline reveal">
-
-          <div class="timeline-item">
-            <span class="timeline-date">2025 — 2029</span>
-            <div>
-              <h3>B.Tech, Computer Science & Engineering (AI)</h3>
-              <p>PSIT · Kanpur</p>
+      <div class="win reveal">
+        <div class="win-bar"><div class="win-dots"><i></i><i></i><i></i></div><span class="win-title">journey.log — achint.os</span><span class="win-tag">04</span></div>
+        <div class="win-body">
+          <div class="section-heading"><p class="eyebrow">04 / THE JOURNEY SO FAR</p><h2 class="split">Learning, contributing<br>and <em>growing.</em></h2></div>
+          <div class="journey-grid">
+            <div class="timeline">
+              <div class="timeline-item rv"><span class="timeline-date">2025 — 2029</span><div><h3>B.Tech, Computer Science & Engineering (AI)</h3><p>Pranveer Singh Institute of Technology · Kanpur</p></div></div>
+              <div class="timeline-item rv"><span class="timeline-date">2026 — PRESENT</span><div><h3>Editing Head · Energy Club</h3><p>PSIT Kanpur · Video editing and content contributions</p></div></div>
+              <div class="timeline-item rv"><span class="timeline-date">2026</span><div><h3>FloodOps AI · SIH project</h3><p>Team Unthinkable Coder · Disaster management problem statement</p></div></div>
             </div>
+            <div class="cert-panel rv"><p class="eyebrow">CERTIFICATIONS & LEARNING</p><div class="cert-list">
+              <div class="rv"><span>01</span>Agentic AI Certified Foundations Associate</div>
+              <div class="rv"><span>02</span>Prompt Engineering for Everyone</div>
+              <div class="rv"><span>03</span>Python 101 for Data Science</div>
+              <div class="rv"><span>04</span>Basic of Python</div>
+              <div class="rv"><span>05</span>Problem Solving (Basic)</div>
+              <div class="rv"><span>06</span>HackerRank Java (Basic)</div>
+            </div></div>
           </div>
-
-          <div class="timeline-item">
-            <span class="timeline-date">2026 — PRESENT</span>
-            <div>
-              <h3>Editing Head · Energy Club</h3>
-              <p>PSIT Kanpur · Video editing and content contributions</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <span class="timeline-date">2026</span>
-            <div>
-              <h3>FloodOps AI · SIH Project</h3>
-              <p>Team Unthinkable Coder · Disaster management</p>
-            </div>
-          </div>
-
         </div>
-
-
-        <div class="cert-panel reveal">
-
-          <p class="eyebrow">CERTIFICATIONS & LEARNING</p>
-
-          <div class="cert-list">
-            <div><span>01</span>Agentic AI Certified Foundations Associate</div>
-            <div><span>02</span>Prompt Engineering for Everyone</div>
-            <div><span>03</span>Python 101 for Data Science</div>
-            <div><span>04</span>Basic of Python</div>
-            <div><span>05</span>Problem Solving (Basic)</div>
-            <div><span>06</span>HackerRank Java (Basic)</div>
-          </div>
-
-        </div>
-
       </div>
     </section>
-
 
     <!-- CONTACT -->
     <section class="section contact-section" id="contact">
-
-      <div class="section-shell contact-inner">
-
-        <div class="contact-curve">
-          <svg viewBox="0 0 400 100">
-            <path id="curvePath" d="M 10 50 Q 200 -20 390 50" fill="none"/>
-            <text>
-              <textPath href="#curvePath">
-                LET'S MAKE SOMETHING MEANINGFUL ·
-                LET'S MAKE SOMETHING MEANINGFUL ·
-              </textPath>
-            </text>
-          </svg>
+      <div class="section-shell">
+        <div class="win win-dark reveal contact-win">
+          <div class="win-bar"><div class="win-dots"><i></i><i></i><i></i></div><span class="win-title">New Message — Mail</span><span class="win-tag">05</span></div>
+          <div class="contact-inner">
+            <div class="contact-curve" aria-hidden="true"><svg viewBox="0 0 400 100"><path id="curvePath" d="M 10 50 Q 200 -20 390 50" fill="none"/><text><textPath href="#curvePath">LET'S MAKE SOMETHING MEANINGFUL · LET'S MAKE SOMETHING MEANINGFUL · </textPath></text></svg></div>
+            <p class="eyebrow">05 / HAVE AN IDEA?</p><h2 class="split">Let's build something<br><em>worth sharing.</em></h2>
+            <p class="contact-copy">Have a project, opportunity or just want to exchange ideas? My inbox is open.</p>
+            <div class="mail-to"><span>To:</span><b id="mailTyped" data-text="achintawasthi28@gmail.com"></b><i class="caret"></i></div>
+            <a class="button button-light magnetic" href="mailto:achintawasthi28@gmail.com">achintawasthi28@gmail.com <span>↗</span></a>
+            <div class="contact-social"><a href="https://www.linkedin.com/in/achint-awasthi-32b168424" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/achintawasthi01-sys" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.instagram.com/itx.achint" target="_blank" rel="noopener">Instagram ↗</a></div>
+          </div>
         </div>
-
-        <p class="eyebrow">05 / HAVE AN IDEA?</p>
-
-        <h2>
-          Let's build something<br>
-          <em>worth sharing.</em>
-        </h2>
-
-        <p class="contact-copy">
-          Have a project, opportunity or just want to
-          exchange ideas? My inbox is open.
-        </p>
-
-        <a class="button button-light" href="mailto:achintawasthi28@gmail.com">
-          achintawasthi28@gmail.com ↗
-        </a>
-
-        <div class="contact-social">
-          <a href="https://www.linkedin.com/in/achint-awasthi-32b168424" target="_blank">LinkedIn ↗</a>
-          <a href="https://github.com/achintawasthi01-sys" target="_blank">GitHub ↗</a>
-          <a href="https://www.instagram.com/itx.achint" target="_blank">Instagram ↗</a>
-        </div>
-
       </div>
     </section>
-
   </main>
 
+  <footer class="footer"><a class="wordmark" href="#home">achint<span>.</span></a><span>DESIGNED & BUILT WITH CURIOSITY</span><span>© 2026 ACHINT AWASTHI</span></footer>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+  <!-- DOCK -->
+  <nav class="dock-wrap" id="dockWrap" aria-label="Dock">
+    <div class="dock" id="dock">
+      <a class="dock-item active" href="#home" data-sec="home" aria-label="Home"><span class="tip">Home</span><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></a>
+      <a class="dock-item" href="#about" data-sec="about" aria-label="About"><span class="tip">About</span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
+      <a class="dock-item" href="#approach" data-sec="approach" aria-label="Approach"><span class="tip">Approach</span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></a>
+      <a class="dock-item" href="#work" data-sec="work" aria-label="Work"><span class="tip">Work</span><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></a>
+      <a class="dock-item" href="#journey" data-sec="journey" aria-label="Journey"><span class="tip">Journey</span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></a>
+      <span class="dock-sep"></span>
+      <a class="dock-item" href="#contact" data-sec="contact" aria-label="Contact"><span class="tip">Contact</span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+    </div>
+  </nav>
 
-    <a class="wordmark" href="#home">achint<span>.</span></a>
-
-    <span>DESIGNED & BUILT WITH CURIOSITY</span>
-
-    <span>© 2026 ACHINT AWASTHI</span>
-
-  </footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
   <script src="main.js"></script>
-
 </body>
 </html>
